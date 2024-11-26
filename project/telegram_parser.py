@@ -3,6 +3,7 @@ import logging
 import re
 from pyrogram import Client
 from datetime import datetime
+from transformers import pipeline
 from db.db_connection import get_connection
 
 with open('C:\\Users\\matve\\PycharmProjects\\SII_Lab_1\\project\\api-logging.txt', 'r') as file:
@@ -11,6 +12,10 @@ api_id = int(api[0])
 api_hash = api[1]
 
 donors_id = '@posecretuvsemusvetu12'
+
+# Инициализация моделей для анализа
+sentiment_analyzer = pipeline("sentiment-analysis")
+topic_classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
 
 # Загрузка сохранённого ID
 def load_last_saved_id():
@@ -45,6 +50,29 @@ def normalize_text(text: str) -> str:
     return text.strip().lower()
 
 
+# Анализ тональности текста
+def analyze_sentiment(text: str) -> str:
+    """
+    Анализ тональности текста.
+    :param text: Исходный текст
+    :return: Тональность текста ('POSITIVE', 'NEGATIVE', 'NEUTRAL').
+    """
+    result = sentiment_analyzer(text)
+    return result[0]["label"]
+
+
+# Предсказание темы текста
+def predict_topic(text: str) -> str:
+    """
+    Предсказание темы текста.
+    :param text: Исходный текст
+    :return: Наиболее вероятная тема текста.
+    """
+    candidate_labels = ["спорт", "политика", "развлечения", "технологии", "путешествия", "еда", "мода"]
+    result = topic_classifier(text, candidate_labels)
+    return result["labels"][0]
+
+
 # Добавление пользователя в базу данных
 def add_user_to_db(user_name: str) -> int:
     conn = get_connection()
@@ -57,20 +85,14 @@ def add_user_to_db(user_name: str) -> int:
 
         if user:  # Если пользователь найден
             user_id = user['id']  # Используем ключ 'id', если результат - словарь
-            logging.info(f"User found with ID: {user_id}")
         else:  # Если пользователя нет, добавляем его
             cursor.execute('INSERT INTO "User" ("username") VALUES (%s) RETURNING "id"', (user_name,))
             user = cursor.fetchone()
-            if user:
-                user_id = user['id']  # Используем ключ 'id' для извлечения
-                logging.info(f"User inserted with ID: {user_id}")
-            else:
-                raise Exception("Failed to retrieve user ID after insertion.")
+            user_id = user['id'] if user else None
 
         conn.commit()
-
     except Exception as e:
-        conn.rollback()  # Откат транзакции в случае ошибки
+        conn.rollback()
         logging.error(f"Error occurred while adding user: {e}")
         raise
     finally:
@@ -80,31 +102,20 @@ def add_user_to_db(user_name: str) -> int:
     return user_id
 
 
-
 # Добавление сообщения в таблицу Message
 def add_message_to_db(user_id: int, message_text: str, message_time: str) -> int:
     conn = get_connection()
     cursor = conn.cursor()
 
     try:
-        # Вставляем сообщение
         cursor.execute(
             'INSERT INTO "Message" ("user_id", "text", "date") VALUES (%s, %s, %s) RETURNING "id"',
             (user_id, message_text, message_time)
         )
-
-        # Получаем ID вставленного сообщения
-        message_data = cursor.fetchone()
-        if message_data:
-            message_id = message_data['id']  # Используем ключ 'id' для извлечения данных
-            logging.info(f"Message inserted with ID: {message_id}")
-        else:
-            raise Exception("Failed to retrieve message ID after insertion.")
-
+        message_id = cursor.fetchone()["id"]
         conn.commit()
-
     except Exception as e:
-        conn.rollback()  # Откат транзакции в случае ошибки
+        conn.rollback()
         logging.error(f"Error occurred while adding message: {e}")
         raise
     finally:
@@ -114,69 +125,60 @@ def add_message_to_db(user_id: int, message_text: str, message_time: str) -> int
     return message_id
 
 
-
 # Добавление аналитики в таблицу MessageAnalytic
-def add_message_analytics_to_db(message_id: int, cleaned_text: str):
+def add_message_analytics_to_db(message_id: int, cleaned_text: str, sentiment: str, topic: str):
     conn = get_connection()
     cursor = conn.cursor()
 
-    # Вставляем нормализованный текст
-    cursor.execute(
-    'INSERT INTO "MassageAnalytic" (message_id, text_cleaned) VALUES (%s, %s)',
-        (message_id, cleaned_text)
-    )
-
-    conn.commit()
-    cursor.close()
-    conn.close()
+    try:
+        cursor.execute(
+            'INSERT INTO "MassageAnalytic" (message_id, text_cleaned, predicted_tonality, predicted_topic) VALUES (%s, %s, %s, %s)',
+            (message_id, cleaned_text, sentiment, topic)
+        )
+        conn.commit()
+    except Exception as e:
+        conn.rollback()
+        logging.error(f"Error occurred while adding message analytics: {e}")
+        raise
+    finally:
+        cursor.close()
+        conn.close()
 
 
 # Парсинг сообщений
 async def fetch_new_messages(client: Client):
-    """
-    Асинхронная функция для получения новых сообщений из чата.
-    :param client: клиент Pyrogram
-    """
-    # Загружаем последний сохранённый ID
     last_saved_id = load_last_saved_id()
-    logging.info(f"Loaded last_saved_id: {last_saved_id}")
-
-    # Для хранения самого большого ID
     max_message_id = last_saved_id
 
-    # Парсим сообщения
     async for message in client.get_chat_history(donors_id, offset_id=0):
-        if message.id > last_saved_id:  # Проверяем только новые сообщения
+        if message.id > last_saved_id:
             user_name = (
                 message.from_user.username if message.from_user and message.from_user.username
                 else message.from_user.first_name if message.from_user
                 else "Unknown User"
             )
-            message_time = message.date.strftime("%Y-%m-%d %H:%M:%S")
-
-            # Добавляем пользователя в базу данных (если он новый)
-            user_id = add_user_to_db(user_name)
-
-            # Проверяем текст сообщения на None
             message_text = message.text if message.text is not None else ""
 
-            # Добавляем сообщение в таблицу Message
+            # Пропускаем сообщения с длиной текста менее 3 символов
+            if len(message_text.strip()) < 3:
+                continue
+
+            message_time = message.date.strftime("%Y-%m-%d %H:%M:%S")
+            user_id = add_user_to_db(user_name)
             message_id = add_message_to_db(user_id, message_text, message_time)
 
-            # Нормализуем текст
             normalized_text = normalize_text(message_text)
+            sentiment = analyze_sentiment(normalized_text)
+            topic = predict_topic(normalized_text)
 
-            # Добавляем аналитику для сообщения в таблицу MessageAnalytic
-            add_message_analytics_to_db(message_id, normalized_text)
+            add_message_analytics_to_db(message_id, normalized_text, sentiment, topic)
+            logging.info(f"Processed message ID: {message.id}, Sentiment: {sentiment}, Topic: {topic}")
 
-            logging.info(f"Saved message ID: {message.id}, User: {user_name}")
-
-            # Обновляем максимальный ID
             if message.id > max_message_id:
                 max_message_id = message.id
 
-    # Сохраняем самый большой ID
     save_last_saved_id(max_message_id)
+
 
 # Основной цикл
 async def main():
