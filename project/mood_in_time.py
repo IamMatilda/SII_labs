@@ -4,6 +4,7 @@ import torch
 import matplotlib.pyplot as plt
 from datetime import datetime
 from db_operations import fetch_messages  # Импортируем метод для получения данных из базы данных
+from collections import defaultdict
 
 # Шаг 1. Получение данных из базы данных
 # Получаем данные
@@ -48,25 +49,31 @@ for i, item in enumerate(data):
     item["sentiment"] = labels[predictions[i]]
     item["sentiment_score"] = predictions[i].item()  # Сохраняем числовой результат для графика
 
-# Шаг 3. Визуализация изменения настроения
-# Преобразуем время в числовые индексы для оси X
-time_points = [item["date"] for item in data]
-sentiment_scores = [item["sentiment_score"] for item in data]
+# Шаг 3. Группировка сообщений по user_id
+grouped_data = defaultdict(list)
+for item in data:
+    grouped_data[item["user_id"]].append(item)
 
-# Построение графика
-plt.figure(figsize=(12, 6))
-plt.plot(time_points, sentiment_scores, marker='o', color='b', label='Тональность')
-plt.xticks(rotation=45)
-plt.yticks(range(len(labels)), labels)
-plt.xlabel("Время")
-plt.ylabel("Тональность")
-plt.title("Изменение настроения во времени")
-plt.legend()
-plt.grid(True)
-plt.tight_layout()
-plt.show()
+# Шаг 4. Построение графиков для каждого пользователя
+for user_id, messages in grouped_data.items():
+    # Преобразуем время и тональность
+    time_points = [item["date"] for item in messages]
+    sentiment_scores = [item["sentiment_score"] for item in messages]
 
-# Шаг 4. Вывод отчета
+    # Построение графика
+    plt.figure(figsize=(12, 6))
+    plt.plot(time_points, sentiment_scores, marker='o', color='b', label='Тональность')
+    plt.xticks(rotation=45)
+    plt.yticks(range(len(labels)), labels)
+    plt.xlabel("Время")
+    plt.ylabel("Тональность")
+    plt.title(f"Изменение настроения пользователя {user_id}")
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
+
+# Шаг 5. Вывод отчета
 print("Отчет об изменении настроения:")
 for item in data:
     print(f"Время: {item['date']}, Сообщение: \"{item['text']}\", Тональность: {item['sentiment']}")

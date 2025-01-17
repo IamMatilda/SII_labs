@@ -73,8 +73,8 @@ def fetch_messages(limit=300):
     try:
         cursor = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)  # Используем RealDictCursor
 
-        # SQL-запрос
-        query = f'SELECT text, date FROM "Message" ORDER BY date DESC LIMIT %s'
+        # Обновленный SQL-запрос, чтобы извлекать также user_id
+        query = f'SELECT text, date, user_id FROM "Message" ORDER BY date DESC LIMIT %s'
         cursor.execute(query, (limit,))
         messages = cursor.fetchall()
 
@@ -91,8 +91,9 @@ def fetch_messages(limit=300):
         for row in messages:
             text = row.get("text")
             date = row.get("date")
-            if text and text.strip() and date:
-                result.append({"text": text.strip(), "date": date})
+            user_id = row.get("user_id")  # Извлекаем user_id
+            if text and text.strip() and date and user_id:  # Проверяем наличие всех необходимых данных
+                result.append({"text": text.strip(), "date": date, "user_id": user_id})
 
         if not result:
             print("После фильтрации сообщений не осталось.")
@@ -113,6 +114,7 @@ def fetch_messages(limit=300):
             conn.close()
         except Exception as e:
             print(f"Ошибка при закрытии соединения: {e.__class__.__name__}: {e}")
+
 
 def fetch_analytics(limit=300):
     """
