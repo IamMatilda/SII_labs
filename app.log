@@ -642,3 +642,472 @@
 2025-01-17 19:51:17,115 - INFO - Disconnected
 2025-01-17 19:51:17,115 - INFO - Session stopped
 2025-01-17 19:51:17,115 - INFO - Connecting...
+2025-01-17 21:41:09,663 - INFO - Connecting...
+2025-01-17 21:41:09,664 - INFO - Connected! Production DC2 - IPv4
+2025-01-17 21:41:09,665 - INFO - NetworkTask started
+2025-01-17 21:41:10,426 - INFO - Session initialized: Layer 158
+2025-01-17 21:41:10,426 - INFO - Device: CPython 3.12.5 - Pyrogram 2.0.106
+2025-01-17 21:41:10,426 - INFO - System: Windows 11 (en)
+2025-01-17 21:41:10,426 - INFO - Session started
+2025-01-17 21:41:10,428 - INFO - PingTask started
+2025-01-17 21:41:10,784 - INFO - Started 16 HandlerTasks
+2025-01-17 21:41:10,794 - INFO - Stopped 16 HandlerTasks
+2025-01-17 21:41:10,794 - INFO - PingTask stopped
+2025-01-17 21:41:10,794 - INFO - NetworkTask stopped
+2025-01-17 21:41:10,795 - INFO - Disconnected
+2025-01-17 21:41:10,795 - INFO - Session stopped
+2025-01-17 21:41:49,126 - INFO - Connecting...
+2025-01-17 21:41:49,127 - INFO - Connected! Production DC2 - IPv4
+2025-01-17 21:41:49,127 - INFO - NetworkTask started
+2025-01-17 21:41:51,028 - INFO - Session initialized: Layer 158
+2025-01-17 21:41:51,028 - INFO - Device: CPython 3.12.5 - Pyrogram 2.0.106
+2025-01-17 21:41:51,028 - INFO - System: Windows 11 (en)
+2025-01-17 21:41:51,028 - INFO - Session started
+2025-01-17 21:41:51,030 - INFO - PingTask started
+2025-01-17 21:41:51,440 - INFO - Started 16 HandlerTasks
+2025-01-17 21:41:51,450 - INFO - Stopped 16 HandlerTasks
+2025-01-17 21:41:51,451 - INFO - PingTask stopped
+2025-01-17 21:41:51,451 - INFO - NetworkTask stopped
+2025-01-17 21:41:51,451 - INFO - Disconnected
+2025-01-17 21:41:51,451 - INFO - Session stopped
+2025-01-17 21:42:16,393 - INFO - Connecting...
+2025-01-17 21:42:16,394 - INFO - Connected! Production DC2 - IPv4
+2025-01-17 21:42:16,394 - INFO - NetworkTask started
+2025-01-17 21:42:17,547 - INFO - Session initialized: Layer 158
+2025-01-17 21:42:17,547 - INFO - Device: CPython 3.12.5 - Pyrogram 2.0.106
+2025-01-17 21:42:17,547 - INFO - System: Windows 11 (en)
+2025-01-17 21:42:17,547 - INFO - Session started
+2025-01-17 21:42:17,549 - INFO - PingTask started
+2025-01-17 21:42:17,997 - INFO - Started 16 HandlerTasks
+2025-01-17 21:42:18,301 - INFO - Active users: 1.0
+2025-01-17 21:42:19,367 - INFO - Processed message ID: 75, Sentiment: NEGATIVE, Topic: еда
+2025-01-17 21:42:20,368 - INFO - Current CPU usage: 9.2%
+2025-01-17 21:42:20,368 - INFO - Processed messages: 0.0
+2025-01-17 21:42:22,092 - INFO - Processed message ID: 74, Sentiment: POSITIVE, Topic: развлечения
+2025-01-17 21:42:23,093 - INFO - Current CPU usage: 10.5%
+2025-01-17 21:42:23,093 - INFO - Processed messages: 1.0
+2025-01-17 21:42:24,522 - INFO - Processed message ID: 73, Sentiment: POSITIVE, Topic: еда
+2025-01-17 21:42:25,523 - INFO - Current CPU usage: 14.0%
+2025-01-17 21:42:25,523 - INFO - Processed messages: 2.0
+2025-01-17 21:42:27,062 - INFO - Processed message ID: 72, Sentiment: NEGATIVE, Topic: путешествия
+2025-01-17 21:42:28,063 - INFO - Current CPU usage: 9.6%
+2025-01-17 21:42:28,063 - INFO - Processed messages: 3.0
+2025-01-17 21:42:29,990 - INFO - Processed message ID: 71, Sentiment: POSITIVE, Topic: технологии
+2025-01-17 21:42:30,990 - INFO - Current CPU usage: 7.2%
+2025-01-17 21:42:30,990 - INFO - Processed messages: 4.0
+2025-01-17 21:42:32,347 - INFO - Processed message ID: 70, Sentiment: POSITIVE, Topic: путешествия
+2025-01-17 21:42:33,348 - INFO - Current CPU usage: 9.0%
+2025-01-17 21:42:33,348 - INFO - Processed messages: 5.0
+2025-01-17 21:42:34,906 - INFO - Processed message ID: 69, Sentiment: POSITIVE, Topic: путешествия
+2025-01-17 21:42:35,907 - INFO - Current CPU usage: 10.9%
+2025-01-17 21:42:35,907 - INFO - Processed messages: 6.0
+2025-01-17 21:42:37,338 - INFO - Processed message ID: 68, Sentiment: NEGATIVE, Topic: путешествия
+2025-01-17 21:42:38,339 - INFO - Current CPU usage: 9.7%
+2025-01-17 21:42:38,339 - INFO - Processed messages: 7.0
+2025-01-17 21:42:39,773 - INFO - Processed message ID: 67, Sentiment: NEGATIVE, Topic: путешествия
+2025-01-17 21:42:40,774 - INFO - Current CPU usage: 9.2%
+2025-01-17 21:42:40,774 - INFO - Processed messages: 8.0
+2025-01-17 21:42:42,071 - INFO - Processed message ID: 66, Sentiment: POSITIVE, Topic: спорт
+2025-01-17 21:42:43,072 - INFO - Current CPU usage: 8.4%
+2025-01-17 21:42:43,072 - INFO - Processed messages: 9.0
+2025-01-17 21:42:44,392 - INFO - Processed message ID: 65, Sentiment: NEGATIVE, Topic: еда
+2025-01-17 21:42:45,393 - INFO - Current CPU usage: 11.4%
+2025-01-17 21:42:45,393 - INFO - Processed messages: 10.0
+2025-01-17 21:42:46,997 - INFO - Processed message ID: 64, Sentiment: NEGATIVE, Topic: спорт
+2025-01-17 21:42:47,998 - INFO - Current CPU usage: 8.2%
+2025-01-17 21:42:47,998 - INFO - Processed messages: 11.0
+2025-01-17 21:42:49,446 - INFO - Processed message ID: 63, Sentiment: POSITIVE, Topic: спорт
+2025-01-17 21:42:50,447 - INFO - Current CPU usage: 10.6%
+2025-01-17 21:42:50,447 - INFO - Processed messages: 12.0
+2025-01-17 21:42:52,908 - INFO - Processed message ID: 62, Sentiment: NEGATIVE, Topic: спорт
+2025-01-17 21:42:53,909 - INFO - Current CPU usage: 9.9%
+2025-01-17 21:42:53,909 - INFO - Processed messages: 13.0
+2025-01-17 21:42:56,335 - INFO - Processed message ID: 61, Sentiment: NEGATIVE, Topic: политика
+2025-01-17 21:42:57,336 - INFO - Current CPU usage: 12.7%
+2025-01-17 21:42:57,336 - INFO - Processed messages: 14.0
+2025-01-17 21:43:00,402 - INFO - Processed message ID: 59, Sentiment: NEGATIVE, Topic: развлечения
+2025-01-17 21:43:01,403 - INFO - Current CPU usage: 7.5%
+2025-01-17 21:43:01,403 - INFO - Processed messages: 15.0
+2025-01-17 21:43:01,429 - INFO - Active users: 2.0
+2025-01-17 21:43:02,462 - INFO - Processed message ID: 58, Sentiment: POSITIVE, Topic: еда
+2025-01-17 21:43:03,463 - INFO - Current CPU usage: 9.4%
+2025-01-17 21:43:03,463 - INFO - Processed messages: 16.0
+2025-01-17 21:43:04,559 - INFO - Processed message ID: 57, Sentiment: POSITIVE, Topic: еда
+2025-01-17 21:43:05,559 - INFO - Current CPU usage: 10.6%
+2025-01-17 21:43:05,559 - INFO - Processed messages: 17.0
+2025-01-17 21:43:06,782 - INFO - Processed message ID: 56, Sentiment: POSITIVE, Topic: политика
+2025-01-17 21:43:07,784 - INFO - Current CPU usage: 9.6%
+2025-01-17 21:43:07,784 - INFO - Processed messages: 18.0
+2025-01-17 21:43:08,832 - INFO - Processed message ID: 55, Sentiment: POSITIVE, Topic: еда
+2025-01-17 21:43:09,833 - INFO - Current CPU usage: 11.1%
+2025-01-17 21:43:09,833 - INFO - Processed messages: 19.0
+2025-01-17 21:43:10,882 - INFO - Processed message ID: 54, Sentiment: NEGATIVE, Topic: еда
+2025-01-17 21:43:11,883 - INFO - Current CPU usage: 8.6%
+2025-01-17 21:43:11,883 - INFO - Processed messages: 20.0
+2025-01-17 21:43:13,124 - INFO - Processed message ID: 53, Sentiment: NEGATIVE, Topic: еда
+2025-01-17 21:43:14,126 - INFO - Current CPU usage: 19.2%
+2025-01-17 21:43:14,126 - INFO - Processed messages: 21.0
+2025-01-17 21:43:15,467 - INFO - Processed message ID: 52, Sentiment: NEGATIVE, Topic: еда
+2025-01-17 21:43:16,467 - INFO - Current CPU usage: 12.1%
+2025-01-17 21:43:16,467 - INFO - Processed messages: 22.0
+2025-01-17 21:43:17,600 - INFO - Processed message ID: 51, Sentiment: POSITIVE, Topic: спорт
+2025-01-17 21:43:18,601 - INFO - Current CPU usage: 7.9%
+2025-01-17 21:43:18,601 - INFO - Processed messages: 23.0
+2025-01-17 21:43:19,592 - INFO - Processed message ID: 50, Sentiment: POSITIVE, Topic: еда
+2025-01-17 21:43:20,593 - INFO - Current CPU usage: 8.5%
+2025-01-17 21:43:20,593 - INFO - Processed messages: 24.0
+2025-01-17 21:43:21,726 - INFO - Processed message ID: 49, Sentiment: NEGATIVE, Topic: мода
+2025-01-17 21:43:22,727 - INFO - Current CPU usage: 8.2%
+2025-01-17 21:43:22,727 - INFO - Processed messages: 25.0
+2025-01-17 21:43:23,799 - INFO - Processed message ID: 46, Sentiment: POSITIVE, Topic: еда
+2025-01-17 21:43:24,800 - INFO - Current CPU usage: 17.8%
+2025-01-17 21:43:24,800 - INFO - Processed messages: 26.0
+2025-01-17 21:43:25,838 - INFO - Processed message ID: 45, Sentiment: NEGATIVE, Topic: еда
+2025-01-17 21:43:26,839 - INFO - Current CPU usage: 9.1%
+2025-01-17 21:43:26,839 - INFO - Processed messages: 27.0
+2025-01-17 21:43:27,887 - INFO - Processed message ID: 43, Sentiment: POSITIVE, Topic: еда
+2025-01-17 21:43:28,888 - INFO - Current CPU usage: 7.8%
+2025-01-17 21:43:28,888 - INFO - Processed messages: 28.0
+2025-01-17 21:43:29,905 - INFO - Processed message ID: 42, Sentiment: POSITIVE, Topic: еда
+2025-01-17 21:43:30,906 - INFO - Current CPU usage: 8.3%
+2025-01-17 21:43:30,906 - INFO - Processed messages: 29.0
+2025-01-17 21:43:31,975 - INFO - Processed message ID: 41, Sentiment: POSITIVE, Topic: еда
+2025-01-17 21:43:32,976 - INFO - Current CPU usage: 9.3%
+2025-01-17 21:43:32,976 - INFO - Processed messages: 30.0
+2025-01-17 21:43:34,160 - INFO - Processed message ID: 35, Sentiment: POSITIVE, Topic: спорт
+2025-01-17 21:43:35,161 - INFO - Current CPU usage: 13.2%
+2025-01-17 21:43:35,161 - INFO - Processed messages: 31.0
+2025-01-17 21:43:36,267 - INFO - Processed message ID: 34, Sentiment: NEGATIVE, Topic: еда
+2025-01-17 21:43:37,268 - INFO - Current CPU usage: 9.4%
+2025-01-17 21:43:37,268 - INFO - Processed messages: 32.0
+2025-01-17 21:43:38,262 - INFO - Processed message ID: 25, Sentiment: POSITIVE, Topic: еда
+2025-01-17 21:43:39,263 - INFO - Current CPU usage: 8.7%
+2025-01-17 21:43:39,263 - INFO - Processed messages: 33.0
+2025-01-17 21:43:40,279 - INFO - Processed message ID: 24, Sentiment: NEGATIVE, Topic: еда
+2025-01-17 21:43:41,280 - INFO - Current CPU usage: 10.8%
+2025-01-17 21:43:41,280 - INFO - Processed messages: 34.0
+2025-01-17 21:43:42,314 - INFO - Processed message ID: 23, Sentiment: POSITIVE, Topic: путешествия
+2025-01-17 21:43:43,315 - INFO - Current CPU usage: 9.2%
+2025-01-17 21:43:43,315 - INFO - Processed messages: 35.0
+2025-01-17 21:43:44,788 - INFO - Processed message ID: 22, Sentiment: NEGATIVE, Topic: мода
+2025-01-17 21:43:45,789 - INFO - Current CPU usage: 12.2%
+2025-01-17 21:43:45,789 - INFO - Processed messages: 36.0
+2025-01-17 21:43:46,873 - INFO - Processed message ID: 20, Sentiment: POSITIVE, Topic: еда
+2025-01-17 21:43:47,874 - INFO - Current CPU usage: 12.9%
+2025-01-17 21:43:47,874 - INFO - Processed messages: 37.0
+2025-01-17 21:43:48,994 - INFO - Processed message ID: 19, Sentiment: POSITIVE, Topic: политика
+2025-01-17 21:43:49,995 - INFO - Current CPU usage: 10.8%
+2025-01-17 21:43:49,995 - INFO - Processed messages: 38.0
+2025-01-17 21:43:50,989 - INFO - Processed message ID: 18, Sentiment: POSITIVE, Topic: еда
+2025-01-17 21:43:51,989 - INFO - Current CPU usage: 9.2%
+2025-01-17 21:43:51,989 - INFO - Processed messages: 39.0
+2025-01-17 21:43:53,397 - INFO - Processed message ID: 17, Sentiment: NEGATIVE, Topic: технологии
+2025-01-17 21:43:54,397 - INFO - Current CPU usage: 18.8%
+2025-01-17 21:43:54,397 - INFO - Processed messages: 40.0
+2025-01-17 21:43:55,502 - INFO - Processed message ID: 16, Sentiment: POSITIVE, Topic: мода
+2025-01-17 21:43:56,503 - INFO - Current CPU usage: 13.5%
+2025-01-17 21:43:56,503 - INFO - Processed messages: 41.0
+2025-01-17 21:43:57,576 - INFO - Processed message ID: 15, Sentiment: POSITIVE, Topic: мода
+2025-01-17 21:43:58,577 - INFO - Current CPU usage: 9.9%
+2025-01-17 21:43:58,577 - INFO - Processed messages: 42.0
+2025-01-17 21:43:59,715 - INFO - Processed message ID: 14, Sentiment: NEGATIVE, Topic: еда
+2025-01-17 21:44:00,716 - INFO - Current CPU usage: 9.5%
+2025-01-17 21:44:00,716 - INFO - Processed messages: 43.0
+2025-01-17 21:44:02,020 - INFO - Processed message ID: 13, Sentiment: NEGATIVE, Topic: политика
+2025-01-17 21:44:03,021 - INFO - Current CPU usage: 8.9%
+2025-01-17 21:44:03,021 - INFO - Processed messages: 44.0
+2025-01-17 21:44:04,190 - INFO - Processed message ID: 11, Sentiment: POSITIVE, Topic: еда
+2025-01-17 21:44:05,191 - INFO - Current CPU usage: 14.5%
+2025-01-17 21:44:05,191 - INFO - Processed messages: 45.0
+2025-01-17 21:44:06,228 - INFO - Processed message ID: 10, Sentiment: POSITIVE, Topic: еда
+2025-01-17 21:44:07,229 - INFO - Current CPU usage: 10.2%
+2025-01-17 21:44:07,229 - INFO - Processed messages: 46.0
+2025-01-17 21:44:08,338 - INFO - Processed message ID: 9, Sentiment: NEGATIVE, Topic: еда
+2025-01-17 21:44:09,340 - INFO - Current CPU usage: 16.3%
+2025-01-17 21:44:09,340 - INFO - Processed messages: 47.0
+2025-01-17 21:44:10,773 - INFO - Processed message ID: 8, Sentiment: NEGATIVE, Topic: еда
+2025-01-17 21:44:11,774 - INFO - Current CPU usage: 14.3%
+2025-01-17 21:44:11,774 - INFO - Processed messages: 48.0
+2025-01-17 21:44:12,905 - INFO - Processed message ID: 7, Sentiment: POSITIVE, Topic: путешествия
+2025-01-17 21:44:13,906 - INFO - Current CPU usage: 9.5%
+2025-01-17 21:44:13,906 - INFO - Processed messages: 49.0
+2025-01-17 21:44:14,995 - INFO - Processed message ID: 6, Sentiment: POSITIVE, Topic: еда
+2025-01-17 21:44:15,996 - INFO - Current CPU usage: 13.0%
+2025-01-17 21:44:15,996 - INFO - Processed messages: 50.0
+2025-01-17 21:44:16,026 - INFO - Active users: 3.0
+2025-01-17 21:44:17,037 - INFO - Processed message ID: 3, Sentiment: POSITIVE, Topic: еда
+2025-01-17 21:44:18,038 - INFO - Current CPU usage: 9.2%
+2025-01-17 21:44:18,038 - INFO - Processed messages: 51.0
+2025-01-17 21:44:19,354 - INFO - Processed message ID: 2, Sentiment: POSITIVE, Topic: путешествия
+2025-01-17 21:44:20,355 - INFO - Current CPU usage: 13.0%
+2025-01-17 21:44:20,355 - INFO - Processed messages: 52.0
+2025-01-17 21:44:20,372 - INFO - NetworkTask stopped
+2025-01-17 21:44:20,372 - INFO - Stopped 16 HandlerTasks
+2025-01-17 21:44:20,372 - INFO - PingTask stopped
+2025-01-17 21:44:20,372 - INFO - Disconnected
+2025-01-17 21:44:20,372 - INFO - Session stopped
+2025-01-17 21:44:20,372 - INFO - Disconnected
+2025-01-17 21:44:20,373 - INFO - Session stopped
+2025-01-17 21:44:20,373 - INFO - Connecting...
+2025-01-17 21:50:43,126 - INFO - Connecting...
+2025-01-17 21:50:43,126 - INFO - Connected! Production DC2 - IPv4
+2025-01-17 21:50:43,127 - INFO - NetworkTask started
+2025-01-17 21:50:44,055 - INFO - Session initialized: Layer 158
+2025-01-17 21:50:44,055 - INFO - Device: CPython 3.12.5 - Pyrogram 2.0.106
+2025-01-17 21:50:44,055 - INFO - System: Windows 11 (en)
+2025-01-17 21:50:44,055 - INFO - Session started
+2025-01-17 21:50:44,058 - INFO - PingTask started
+2025-01-17 21:50:44,639 - INFO - Started 16 HandlerTasks
+2025-01-17 21:50:44,884 - INFO - Active users: 1.0
+2025-01-17 21:50:45,983 - INFO - Processed message ID: 75, Sentiment: NEGATIVE, Topic: мысли
+2025-01-17 21:50:46,984 - INFO - Current CPU usage: 13.4%
+2025-01-17 21:50:46,984 - INFO - Processed messages: 0.0
+2025-01-17 21:50:48,685 - INFO - Processed message ID: 74, Sentiment: POSITIVE, Topic: развлечения
+2025-01-17 21:50:49,686 - INFO - Current CPU usage: 9.2%
+2025-01-17 21:50:49,686 - INFO - Processed messages: 1.0
+2025-01-17 21:50:51,007 - INFO - Processed message ID: 73, Sentiment: POSITIVE, Topic: мысли
+2025-01-17 21:50:52,007 - INFO - Current CPU usage: 8.8%
+2025-01-17 21:50:52,007 - INFO - Processed messages: 2.0
+2025-01-17 21:50:53,529 - INFO - Processed message ID: 72, Sentiment: NEGATIVE, Topic: юмор
+2025-01-17 21:50:54,529 - INFO - Current CPU usage: 13.9%
+2025-01-17 21:50:54,529 - INFO - Processed messages: 3.0
+2025-01-17 21:50:56,417 - INFO - Processed message ID: 71, Sentiment: POSITIVE, Topic: технологии
+2025-01-17 21:50:57,419 - INFO - Current CPU usage: 12.5%
+2025-01-17 21:50:57,419 - INFO - Processed messages: 4.0
+2025-01-17 21:50:58,798 - INFO - Processed message ID: 70, Sentiment: POSITIVE, Topic: спорт
+2025-01-17 21:50:59,800 - INFO - Current CPU usage: 9.7%
+2025-01-17 21:50:59,800 - INFO - Processed messages: 5.0
+2025-01-17 21:51:01,229 - INFO - Processed message ID: 69, Sentiment: POSITIVE, Topic: юмор
+2025-01-17 21:51:02,230 - INFO - Current CPU usage: 11.7%
+2025-01-17 21:51:02,230 - INFO - Processed messages: 6.0
+2025-01-17 21:51:03,670 - INFO - Processed message ID: 68, Sentiment: NEGATIVE, Topic: мысли
+2025-01-17 21:51:04,671 - INFO - Current CPU usage: 13.4%
+2025-01-17 21:51:04,671 - INFO - Processed messages: 7.0
+2025-01-17 21:51:06,137 - INFO - Processed message ID: 67, Sentiment: NEGATIVE, Topic: мысли
+2025-01-17 21:51:07,138 - INFO - Current CPU usage: 12.3%
+2025-01-17 21:51:07,138 - INFO - Processed messages: 8.0
+2025-01-17 21:51:08,492 - INFO - Processed message ID: 66, Sentiment: POSITIVE, Topic: спорт
+2025-01-17 21:51:09,493 - INFO - Current CPU usage: 10.4%
+2025-01-17 21:51:09,493 - INFO - Processed messages: 9.0
+2025-01-17 21:51:10,814 - INFO - Processed message ID: 65, Sentiment: NEGATIVE, Topic: спорт
+2025-01-17 21:51:11,815 - INFO - Current CPU usage: 9.0%
+2025-01-17 21:51:11,815 - INFO - Processed messages: 10.0
+2025-01-17 21:51:13,403 - INFO - Processed message ID: 64, Sentiment: NEGATIVE, Topic: спорт
+2025-01-17 21:51:14,404 - INFO - Current CPU usage: 12.3%
+2025-01-17 21:51:14,404 - INFO - Processed messages: 11.0
+2025-01-17 21:51:16,041 - INFO - Processed message ID: 63, Sentiment: POSITIVE, Topic: спорт
+2025-01-17 21:51:17,042 - INFO - Current CPU usage: 18.1%
+2025-01-17 21:51:17,042 - INFO - Processed messages: 12.0
+2025-01-17 21:51:19,574 - INFO - Processed message ID: 62, Sentiment: NEGATIVE, Topic: спорт
+2025-01-17 21:51:20,575 - INFO - Current CPU usage: 12.1%
+2025-01-17 21:51:20,575 - INFO - Processed messages: 13.0
+2025-01-17 21:51:23,053 - INFO - Processed message ID: 61, Sentiment: NEGATIVE, Topic: политика
+2025-01-17 21:51:24,054 - INFO - Current CPU usage: 11.3%
+2025-01-17 21:51:24,054 - INFO - Processed messages: 14.0
+2025-01-17 21:51:27,292 - INFO - Processed message ID: 59, Sentiment: NEGATIVE, Topic: развлечения
+2025-01-17 21:51:28,293 - INFO - Current CPU usage: 13.6%
+2025-01-17 21:51:28,293 - INFO - Processed messages: 15.0
+2025-01-17 21:51:28,325 - INFO - Active users: 2.0
+2025-01-17 21:51:29,412 - INFO - Processed message ID: 58, Sentiment: POSITIVE, Topic: спорт
+2025-01-17 21:51:30,413 - INFO - Current CPU usage: 13.6%
+2025-01-17 21:51:30,413 - INFO - Processed messages: 16.0
+2025-01-17 21:51:31,519 - INFO - Processed message ID: 57, Sentiment: POSITIVE, Topic: спорт
+2025-01-17 21:51:32,520 - INFO - Current CPU usage: 15.3%
+2025-01-17 21:51:32,520 - INFO - Processed messages: 17.0
+2025-01-17 21:51:33,795 - INFO - Processed message ID: 56, Sentiment: POSITIVE, Topic: политика
+2025-01-17 21:51:34,796 - INFO - Current CPU usage: 31.8%
+2025-01-17 21:51:34,796 - INFO - Processed messages: 18.0
+2025-01-17 21:51:35,851 - INFO - Processed message ID: 55, Sentiment: POSITIVE, Topic: спорт
+2025-01-17 21:51:36,852 - INFO - Current CPU usage: 14.0%
+2025-01-17 21:51:36,852 - INFO - Processed messages: 19.0
+2025-01-17 21:51:37,907 - INFO - Processed message ID: 54, Sentiment: NEGATIVE, Topic: юмор
+2025-01-17 21:51:38,909 - INFO - Current CPU usage: 11.5%
+2025-01-17 21:51:38,909 - INFO - Processed messages: 20.0
+2025-01-17 21:51:40,251 - INFO - Processed message ID: 53, Sentiment: NEGATIVE, Topic: мысли
+2025-01-17 21:53:52,469 - INFO - Connecting...
+2025-01-17 21:53:52,469 - INFO - Connected! Production DC2 - IPv4
+2025-01-17 21:53:52,470 - INFO - NetworkTask started
+2025-01-17 21:53:53,199 - INFO - Session initialized: Layer 158
+2025-01-17 21:53:53,199 - INFO - Device: CPython 3.12.5 - Pyrogram 2.0.106
+2025-01-17 21:53:53,199 - INFO - System: Windows 11 (en)
+2025-01-17 21:53:53,199 - INFO - Session started
+2025-01-17 21:53:53,202 - INFO - PingTask started
+2025-01-17 21:53:53,399 - INFO - Started 16 HandlerTasks
+2025-01-17 21:53:53,872 - INFO - Active users: 1.0
+2025-01-17 21:53:55,258 - INFO - Processed message ID: 75, Sentiment: NEGATIVE, Topic: наука
+2025-01-17 21:53:56,259 - INFO - Current CPU usage: 13.2%
+2025-01-17 21:53:56,259 - INFO - Processed messages: 0.0
+2025-01-17 21:53:58,560 - INFO - Processed message ID: 74, Sentiment: POSITIVE, Topic: развлечения
+2025-01-17 21:53:59,561 - INFO - Current CPU usage: 8.6%
+2025-01-17 21:53:59,561 - INFO - Processed messages: 1.0
+2025-01-17 21:54:01,408 - INFO - Processed message ID: 73, Sentiment: POSITIVE, Topic: новости
+2025-01-17 21:54:02,409 - INFO - Current CPU usage: 10.5%
+2025-01-17 21:54:02,409 - INFO - Processed messages: 2.0
+2025-01-17 21:54:04,300 - INFO - Processed message ID: 72, Sentiment: NEGATIVE, Topic: юмор
+2025-01-17 21:54:05,301 - INFO - Current CPU usage: 17.3%
+2025-01-17 21:54:05,301 - INFO - Processed messages: 3.0
+2025-01-17 21:54:07,635 - INFO - Processed message ID: 71, Sentiment: POSITIVE, Topic: технологии
+2025-01-17 21:54:08,636 - INFO - Current CPU usage: 14.8%
+2025-01-17 21:54:08,636 - INFO - Processed messages: 4.0
+2025-01-17 21:54:10,226 - INFO - Processed message ID: 70, Sentiment: POSITIVE, Topic: новости
+2025-01-17 21:54:11,226 - INFO - Current CPU usage: 8.7%
+2025-01-17 21:54:11,226 - INFO - Processed messages: 5.0
+2025-01-17 21:54:13,085 - INFO - Processed message ID: 69, Sentiment: POSITIVE, Topic: юмор
+2025-01-17 21:54:14,086 - INFO - Current CPU usage: 8.2%
+2025-01-17 21:54:14,086 - INFO - Processed messages: 6.0
+2025-01-17 21:54:15,920 - INFO - Processed message ID: 68, Sentiment: NEGATIVE, Topic: новости
+2025-01-17 21:54:16,920 - INFO - Current CPU usage: 16.1%
+2025-01-17 21:54:16,920 - INFO - Processed messages: 7.0
+2025-01-17 21:54:18,742 - INFO - Processed message ID: 67, Sentiment: NEGATIVE, Topic: новости
+2025-01-17 21:54:19,743 - INFO - Current CPU usage: 11.5%
+2025-01-17 21:54:19,743 - INFO - Processed messages: 8.0
+2025-01-17 21:54:21,428 - INFO - Processed message ID: 66, Sentiment: POSITIVE, Topic: спорт
+2025-01-17 21:54:22,429 - INFO - Current CPU usage: 8.9%
+2025-01-17 21:54:22,429 - INFO - Processed messages: 9.0
+2025-01-17 21:54:24,215 - INFO - Processed message ID: 65, Sentiment: NEGATIVE, Topic: спорт
+2025-01-17 21:54:25,215 - INFO - Current CPU usage: 17.0%
+2025-01-17 21:54:25,215 - INFO - Processed messages: 10.0
+2025-01-17 21:54:27,261 - INFO - Processed message ID: 64, Sentiment: NEGATIVE, Topic: спорт
+2025-01-17 21:54:28,262 - INFO - Current CPU usage: 10.7%
+2025-01-17 21:54:28,262 - INFO - Processed messages: 11.0
+2025-01-17 21:54:30,188 - INFO - Processed message ID: 63, Sentiment: POSITIVE, Topic: спорт
+2025-01-17 21:54:31,189 - INFO - Current CPU usage: 8.4%
+2025-01-17 21:54:31,189 - INFO - Processed messages: 12.0
+2025-01-17 21:54:34,494 - INFO - Processed message ID: 62, Sentiment: NEGATIVE, Topic: спорт
+2025-01-17 21:54:35,495 - INFO - Current CPU usage: 21.4%
+2025-01-17 21:54:35,495 - INFO - Processed messages: 13.0
+2025-01-17 21:54:38,731 - INFO - Processed message ID: 61, Sentiment: NEGATIVE, Topic: политика
+2025-01-17 21:54:39,732 - INFO - Current CPU usage: 15.2%
+2025-01-17 21:54:39,732 - INFO - Processed messages: 14.0
+2025-01-17 21:54:43,666 - INFO - Processed message ID: 59, Sentiment: NEGATIVE, Topic: развлечения
+2025-01-17 21:54:44,667 - INFO - Current CPU usage: 13.3%
+2025-01-17 21:54:44,667 - INFO - Processed messages: 15.0
+2025-01-17 21:54:44,692 - INFO - Active users: 2.0
+2025-01-17 21:54:46,023 - INFO - Processed message ID: 58, Sentiment: POSITIVE, Topic: спорт
+2025-01-17 21:54:47,023 - INFO - Current CPU usage: 9.2%
+2025-01-17 21:54:47,023 - INFO - Processed messages: 16.0
+2025-01-17 21:54:48,409 - INFO - Processed message ID: 57, Sentiment: POSITIVE, Topic: наука
+2025-01-17 21:54:49,410 - INFO - Current CPU usage: 8.5%
+2025-01-17 21:54:49,410 - INFO - Processed messages: 17.0
+2025-01-17 21:54:50,909 - INFO - Processed message ID: 56, Sentiment: POSITIVE, Topic: политика
+2025-01-17 21:54:51,909 - INFO - Current CPU usage: 11.1%
+2025-01-17 21:54:51,909 - INFO - Processed messages: 18.0
+2025-01-17 21:54:53,142 - INFO - Processed message ID: 55, Sentiment: POSITIVE, Topic: спорт
+2025-01-17 21:54:54,143 - INFO - Current CPU usage: 16.2%
+2025-01-17 21:54:54,143 - INFO - Processed messages: 19.0
+2025-01-17 21:54:55,510 - INFO - Processed message ID: 54, Sentiment: NEGATIVE, Topic: юмор
+2025-01-17 21:54:56,511 - INFO - Current CPU usage: 11.5%
+2025-01-17 21:54:56,511 - INFO - Processed messages: 20.0
+2025-01-17 21:54:58,104 - INFO - Processed message ID: 53, Sentiment: NEGATIVE, Topic: мысли
+2025-01-17 21:54:59,105 - INFO - Current CPU usage: 9.6%
+2025-01-17 21:54:59,105 - INFO - Processed messages: 21.0
+2025-01-17 21:55:00,756 - INFO - Processed message ID: 52, Sentiment: NEGATIVE, Topic: развлечения
+2025-01-17 21:55:01,757 - INFO - Current CPU usage: 11.3%
+2025-01-17 21:55:01,757 - INFO - Processed messages: 22.0
+2025-01-17 21:55:03,218 - INFO - Processed message ID: 51, Sentiment: POSITIVE, Topic: спорт
+2025-01-17 21:55:04,219 - INFO - Current CPU usage: 10.1%
+2025-01-17 21:55:04,219 - INFO - Processed messages: 23.0
+2025-01-17 21:55:05,505 - INFO - Processed message ID: 50, Sentiment: POSITIVE, Topic: наука
+2025-01-17 21:55:06,506 - INFO - Current CPU usage: 10.2%
+2025-01-17 21:55:06,506 - INFO - Processed messages: 24.0
+2025-01-17 21:55:07,908 - INFO - Processed message ID: 49, Sentiment: NEGATIVE, Topic: мода
+2025-01-17 21:55:08,909 - INFO - Current CPU usage: 21.0%
+2025-01-17 21:55:08,909 - INFO - Processed messages: 25.0
+2025-01-17 21:55:10,168 - INFO - Processed message ID: 46, Sentiment: POSITIVE, Topic: мода
+2025-01-17 21:55:11,169 - INFO - Current CPU usage: 15.7%
+2025-01-17 21:55:11,169 - INFO - Processed messages: 26.0
+2025-01-17 21:55:12,572 - INFO - Processed message ID: 45, Sentiment: NEGATIVE, Topic: наука
+2025-01-17 21:55:13,573 - INFO - Current CPU usage: 13.2%
+2025-01-17 21:55:13,573 - INFO - Processed messages: 27.0
+2025-01-17 21:55:15,015 - INFO - Processed message ID: 43, Sentiment: POSITIVE, Topic: спорт
+2025-01-17 21:55:16,016 - INFO - Current CPU usage: 17.7%
+2025-01-17 21:55:16,016 - INFO - Processed messages: 28.0
+2025-01-17 21:55:17,348 - INFO - Processed message ID: 42, Sentiment: POSITIVE, Topic: спорт
+2025-01-17 21:55:18,348 - INFO - Current CPU usage: 14.8%
+2025-01-17 21:55:18,348 - INFO - Processed messages: 29.0
+2025-01-17 21:55:19,661 - INFO - Processed message ID: 41, Sentiment: POSITIVE, Topic: спорт
+2025-01-17 21:55:20,662 - INFO - Current CPU usage: 11.8%
+2025-01-17 21:55:20,662 - INFO - Processed messages: 30.0
+2025-01-17 21:55:22,094 - INFO - Processed message ID: 35, Sentiment: POSITIVE, Topic: спорт
+2025-01-17 21:55:23,095 - INFO - Current CPU usage: 13.8%
+2025-01-17 21:55:23,095 - INFO - Processed messages: 31.0
+2025-01-17 21:55:24,595 - INFO - Processed message ID: 34, Sentiment: NEGATIVE, Topic: новости
+2025-01-17 21:55:25,595 - INFO - Current CPU usage: 13.7%
+2025-01-17 21:55:25,595 - INFO - Processed messages: 32.0
+2025-01-17 21:55:26,923 - INFO - Processed message ID: 25, Sentiment: POSITIVE, Topic: новости
+2025-01-17 21:55:27,924 - INFO - Current CPU usage: 14.8%
+2025-01-17 21:55:27,924 - INFO - Processed messages: 33.0
+2025-01-17 21:55:29,360 - INFO - Processed message ID: 24, Sentiment: NEGATIVE, Topic: наука
+2025-01-17 21:55:30,361 - INFO - Current CPU usage: 18.3%
+2025-01-17 21:55:30,361 - INFO - Processed messages: 34.0
+2025-01-17 21:55:31,712 - INFO - Processed message ID: 23, Sentiment: POSITIVE, Topic: наука
+2025-01-17 21:55:32,713 - INFO - Current CPU usage: 10.2%
+2025-01-17 21:55:32,713 - INFO - Processed messages: 35.0
+2025-01-17 21:55:34,443 - INFO - Processed message ID: 22, Sentiment: NEGATIVE, Topic: мысли
+2025-01-17 21:55:35,444 - INFO - Current CPU usage: 17.9%
+2025-01-17 21:55:35,444 - INFO - Processed messages: 36.0
+2025-01-17 21:55:36,783 - INFO - Processed message ID: 20, Sentiment: POSITIVE, Topic: наука
+2025-01-17 21:55:37,783 - INFO - Current CPU usage: 10.5%
+2025-01-17 21:55:37,783 - INFO - Processed messages: 37.0
+2025-01-17 21:55:39,275 - INFO - Processed message ID: 19, Sentiment: POSITIVE, Topic: политика
+2025-01-17 21:55:40,276 - INFO - Current CPU usage: 8.9%
+2025-01-17 21:55:40,276 - INFO - Processed messages: 38.0
+2025-01-17 21:55:41,494 - INFO - Processed message ID: 18, Sentiment: POSITIVE, Topic: новости
+2025-01-17 21:55:42,494 - INFO - Current CPU usage: 9.6%
+2025-01-17 21:55:42,494 - INFO - Processed messages: 39.0
+2025-01-17 21:55:44,187 - INFO - Processed message ID: 17, Sentiment: NEGATIVE, Topic: технологии
+2025-01-17 21:55:45,188 - INFO - Current CPU usage: 16.6%
+2025-01-17 21:55:45,188 - INFO - Processed messages: 40.0
+2025-01-17 21:55:46,502 - INFO - Processed message ID: 16, Sentiment: POSITIVE, Topic: мода
+2025-01-17 21:55:47,502 - INFO - Current CPU usage: 10.0%
+2025-01-17 21:55:47,502 - INFO - Processed messages: 41.0
+2025-01-17 21:55:48,838 - INFO - Processed message ID: 15, Sentiment: POSITIVE, Topic: мода
+2025-01-17 21:55:49,839 - INFO - Current CPU usage: 12.6%
+2025-01-17 21:55:49,839 - INFO - Processed messages: 42.0
+2025-01-17 21:55:51,481 - INFO - Processed message ID: 14, Sentiment: NEGATIVE, Topic: наука
+2025-01-17 21:55:52,482 - INFO - Current CPU usage: 10.2%
+2025-01-17 21:55:52,482 - INFO - Processed messages: 43.0
+2025-01-17 21:55:54,167 - INFO - Processed message ID: 13, Sentiment: NEGATIVE, Topic: политика
+2025-01-17 21:55:55,168 - INFO - Current CPU usage: 14.0%
+2025-01-17 21:55:55,168 - INFO - Processed messages: 44.0
+2025-01-17 21:55:56,898 - INFO - Processed message ID: 11, Sentiment: POSITIVE, Topic: спорт
+2025-01-17 21:55:57,899 - INFO - Current CPU usage: 12.5%
+2025-01-17 21:55:57,899 - INFO - Processed messages: 45.0
+2025-01-17 21:55:59,227 - INFO - Processed message ID: 10, Sentiment: POSITIVE, Topic: новости
+2025-01-17 21:56:00,228 - INFO - Current CPU usage: 10.7%
+2025-01-17 21:56:00,228 - INFO - Processed messages: 46.0
+2025-01-17 21:56:01,551 - INFO - Processed message ID: 9, Sentiment: NEGATIVE, Topic: наука
+2025-01-17 21:56:02,552 - INFO - Current CPU usage: 12.1%
+2025-01-17 21:56:02,552 - INFO - Processed messages: 47.0
+2025-01-17 21:56:04,230 - INFO - Processed message ID: 8, Sentiment: NEGATIVE, Topic: мода
+2025-01-17 21:56:05,231 - INFO - Current CPU usage: 14.9%
+2025-01-17 21:56:05,231 - INFO - Processed messages: 48.0
+2025-01-17 21:56:06,677 - INFO - Processed message ID: 7, Sentiment: POSITIVE, Topic: мысли
+2025-01-17 21:56:07,678 - INFO - Current CPU usage: 11.2%
+2025-01-17 21:56:07,678 - INFO - Processed messages: 49.0
+2025-01-17 21:56:09,005 - INFO - Processed message ID: 6, Sentiment: POSITIVE, Topic: наука
+2025-01-17 21:56:10,006 - INFO - Current CPU usage: 10.9%
+2025-01-17 21:56:10,006 - INFO - Processed messages: 50.0
+2025-01-17 21:56:10,040 - INFO - Active users: 3.0
+2025-01-17 21:56:11,293 - INFO - Processed message ID: 3, Sentiment: POSITIVE, Topic: технологии
+2025-01-17 21:56:12,293 - INFO - Current CPU usage: 9.5%
+2025-01-17 21:56:12,293 - INFO - Processed messages: 51.0
+2025-01-17 21:56:13,902 - INFO - Processed message ID: 2, Sentiment: POSITIVE, Topic: мысли
+2025-01-17 21:56:14,903 - INFO - Current CPU usage: 12.1%
+2025-01-17 21:56:14,903 - INFO - Processed messages: 52.0
+2025-01-17 21:56:14,903 - INFO - NetworkTask stopped
+2025-01-17 21:56:14,904 - INFO - PingTask stopped
+2025-01-17 21:56:14,904 - INFO - Disconnected
+2025-01-17 21:56:14,904 - INFO - Session stopped
+2025-01-17 21:56:14,904 - INFO - Connecting...
+2025-01-17 21:56:14,905 - INFO - Connected! Production DC2 - IPv4
+2025-01-17 21:56:14,905 - INFO - NetworkTask started
+2025-01-17 21:56:16,101 - INFO - Discarding packet: The msg_id is lower than all the stored values
+2025-01-17 21:56:16,102 - INFO - Saved last_saved_id: 75
+2025-01-17 21:56:16,120 - INFO - NetworkTask stopped
+2025-01-17 21:56:16,120 - INFO - Disconnected
+2025-01-17 21:56:16,120 - INFO - Stopped 16 HandlerTasks
+2025-01-17 21:56:16,121 - INFO - Send exception: ConnectionResetError Connection lost
+2025-01-17 21:56:16,121 - INFO - Disconnected
+2025-01-17 21:56:16,121 - INFO - Session stopped
+2025-01-17 21:56:16,121 - INFO - Send exception: ConnectionResetError Connection lost

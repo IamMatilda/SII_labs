@@ -68,7 +68,7 @@ def analyze_sentiment(text: str) -> str:
 
 # Предсказание темы текста
 def predict_topic(text: str) -> str:
-    candidate_labels = ["спорт", "политика", "развлечения", "технологии", "путешествия", "еда", "мода"]
+    candidate_labels = ["спорт", "политика", "развлечения", "технологии", "мода", "мысли", "юмор", "новости", "наука"]
     result = topic_classifier(text, candidate_labels)
     return result["labels"][0]
 
