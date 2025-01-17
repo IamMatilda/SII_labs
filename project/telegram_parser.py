@@ -5,6 +5,24 @@ from pyrogram import Client
 from datetime import datetime
 from transformers import pipeline
 from db.db_connection import get_connection
+from prometheus_client import start_http_server, Counter, Gauge
+import time
+import psutil
+
+# Инициализация Prometheus метрик
+processed_messages = Counter("processed_messages", "Количество обработанных сообщений")
+active_users = Gauge("active_users", "Количество активных пользователей")
+cpu_usage = Gauge("cpu_usage", "Использование CPU в процентах")
+
+# Настройка логирования
+logging.basicConfig(
+    level=logging.INFO,  # Уровень логирования
+    format="%(asctime)s - %(levelname)s - %(message)s",  # Формат записи
+    handlers=[
+        logging.FileHandler("app.log"),  # Запись логов в файл
+        logging.StreamHandler()  # Вывод логов в консоль
+    ]
+)
 
 with open('C:\\Users\\matve\\PycharmProjects\\SII_Lab_1\\project\\api-logging.txt', 'r') as file:
     api = file.read().strip().split(':')
@@ -35,39 +53,21 @@ def save_last_saved_id(last_message_id):
 
 # Нормализация текста: удаление ссылок, спецсимволов и приведение к нижнему регистру
 def normalize_text(text: str) -> str:
-    """
-    Простая нормализация текста: удаление ссылок, спецсимволов и приведение к нижнему регистру.
-    :param text: Исходный текст
-    :return: Нормализованный текст
-    """
-    if text is None:  # Проверяем на None
+    if text is None:
         return ""
-    # Удаляем URL
     text = re.sub(r'http\S+|www\S+', '', text)
-    # Удаляем спецсимволы
     text = re.sub(r'[^\w\s]', '', text)
-    # Приводим текст к нижнему регистру
     return text.strip().lower()
 
 
 # Анализ тональности текста
 def analyze_sentiment(text: str) -> str:
-    """
-    Анализ тональности текста.
-    :param text: Исходный текст
-    :return: Тональность текста ('POSITIVE', 'NEGATIVE', 'NEUTRAL').
-    """
     result = sentiment_analyzer(text)
     return result[0]["label"]
 
 
 # Предсказание темы текста
 def predict_topic(text: str) -> str:
-    """
-    Предсказание темы текста.
-    :param text: Исходный текст
-    :return: Наиболее вероятная тема текста.
-    """
     candidate_labels = ["спорт", "политика", "развлечения", "технологии", "путешествия", "еда", "мода"]
     result = topic_classifier(text, candidate_labels)
     return result["labels"][0]
@@ -77,19 +77,17 @@ def predict_topic(text: str) -> str:
 def add_user_to_db(user_name: str) -> int:
     conn = get_connection()
     cursor = conn.cursor()
-
     try:
-        # Проверяем, есть ли пользователь в базе данных
         cursor.execute('SELECT id FROM "User" WHERE "username" = %s', (user_name,))
         user = cursor.fetchone()
-
-        if user:  # Если пользователь найден
-            user_id = user['id']  # Используем ключ 'id', если результат - словарь
-        else:  # Если пользователя нет, добавляем его
+        if user:
+            user_id = user['id']
+        else:
             cursor.execute('INSERT INTO "User" ("username") VALUES (%s) RETURNING "id"', (user_name,))
             user = cursor.fetchone()
             user_id = user['id'] if user else None
-
+            active_users.inc()  # Увеличиваем счетчик активных пользователей
+            logging.info(f"Active users: {active_users._value.get()}")
         conn.commit()
     except Exception as e:
         conn.rollback()
@@ -98,7 +96,6 @@ def add_user_to_db(user_name: str) -> int:
     finally:
         cursor.close()
         conn.close()
-
     return user_id
 
 
@@ -106,7 +103,6 @@ def add_user_to_db(user_name: str) -> int:
 def add_message_to_db(user_id: int, message_text: str, message_time: str) -> int:
     conn = get_connection()
     cursor = conn.cursor()
-
     try:
         cursor.execute(
             'INSERT INTO "Message" ("user_id", "text", "date") VALUES (%s, %s, %s) RETURNING "id"',
@@ -121,7 +117,6 @@ def add_message_to_db(user_id: int, message_text: str, message_time: str) -> int
     finally:
         cursor.close()
         conn.close()
-
     return message_id
 
 
@@ -129,7 +124,6 @@ def add_message_to_db(user_id: int, message_text: str, message_time: str) -> int
 def add_message_analytics_to_db(message_id: int, cleaned_text: str, sentiment: str, topic: str):
     conn = get_connection()
     cursor = conn.cursor()
-
     try:
         cursor.execute(
             'INSERT INTO "MassageAnalytic" (message_id, text_cleaned, predicted_tonality, predicted_topic) VALUES (%s, %s, %s, %s)',
@@ -159,7 +153,6 @@ async def fetch_new_messages(client: Client):
             )
             message_text = message.text if message.text is not None else ""
 
-            # Пропускаем сообщения с длиной текста менее 3 символов
             if len(message_text.strip()) < 3:
                 continue
 
@@ -173,6 +166,13 @@ async def fetch_new_messages(client: Client):
 
             add_message_analytics_to_db(message_id, normalized_text, sentiment, topic)
             logging.info(f"Processed message ID: {message.id}, Sentiment: {sentiment}, Topic: {topic}")
+            cpu_percent = psutil.cpu_percent(interval=1)
+            cpu_usage.set(cpu_percent)  # Обновляем метрику Prometheus
+            logging.info(f"Current CPU usage: {cpu_percent}%")  # Логируем использование CPU
+            logging.info(f"Processed messages: {processed_messages._value.get()}")
+
+            # Обновление метрик
+            processed_messages.inc()
 
             if message.id > max_message_id:
                 max_message_id = message.id
@@ -180,12 +180,13 @@ async def fetch_new_messages(client: Client):
     save_last_saved_id(max_message_id)
 
 
+# Функция для мониторинга CPU
+
+
 # Основной цикл
 async def main():
-    logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
     async with Client("user_bot", api_id=api_id, api_hash=api_hash) as client:
         await fetch_new_messages(client)
-
 
 if __name__ == "__main__":
     asyncio.run(main())

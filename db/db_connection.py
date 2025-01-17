@@ -18,7 +18,6 @@ def get_connection():
             port=DB_CONFIG["port"],
             cursor_factory=RealDictCursor,
         )
-        print("Успешно подключено к базе данных!")
         return conn
     except Exception as e:
         print("Ошибка подключения к базе данных:", e)
